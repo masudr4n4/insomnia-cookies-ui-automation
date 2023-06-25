@@ -1,0 +1,21 @@
+version: "3"
+
+services:    
+    chromedriver:
+        image: selenium/standalone-chrome
+        ports: 
+          - "4444:4444"
+        volumes:
+            - /dev/shm:/dev/shm
+    e2e-tests:
+        container_name: insomnia-web-e2e
+        build: ../.
+        volumes:
+            - ../:/tests
+        depends_on:
+            - chromedriver
+        environment:
+            - localIP=172.17.0.1:4444
+        # command: 
+        #     ["pytest", "-O", "Linux", "-U", "http://web.stage.insomniacookies.com/", "-H", "\"True\"", "--junitxml=junit/test-results.xml", "--alluredir=allure", "-x", "--reruns", "2", "--reruns-delay", "3"]
+            
