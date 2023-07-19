@@ -68,6 +68,8 @@ Website Automation framework for Insomnia cookies.
 2. Makefile
     - `make perms` - will fix any permissions issue you may face with viewing/editing allure reports
     - `make cleanup`  - will remove the allure and junit folders. 
+## HTML reports
+<img width="1276" alt="image" src="https://github.com/masudr4n4/insomnia-cookies-ui-automation/assets/34313493/a13ee5a7-0c12-44f3-878a-2491fb11098f">
 
 
 ## Running single test
